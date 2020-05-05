@@ -22,6 +22,8 @@
       <p *ngIf="showSecretPassword">Secret Password = Tuna</p>
       <div 
       *ngFor="let logItem of log"
+      [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+      [ngClass]="{'bisque-text' : logItem >= 5}"
       >{{logItem}}</div>
     </div>
   </div>
