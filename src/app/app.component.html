@@ -18,12 +18,17 @@
       >Reset User</button>
       <hr>
       <button class="btn btn-primary" (click)="showSecretPassword = !showSecretPassword">Toggle details</button>
-      <button class="btn btn-primary" (click)="onToggleDetails()">Toggle details with log</button>
+      <button class="btn btn-primary" (click)="onToggleDetails()">Toggle details with logOne</button>
       <p *ngIf="showSecretPassword">Secret Password = Tuna</p>
       <div 
-      *ngFor="let logItem of log"
-      [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
-      [ngClass]="{'bisque-text' : logItem >= 5}"
+      *ngFor="let logOneItem of logOne"
+      [ngStyle]="{backgroundColor: logOneItem >= 5 ? 'blue' : 'transparent'}"
+      [ngClass]="{'bisque-text' : logOneItem >= 5}"
+      >{{logOneItem}}</div>
+      <div 
+      *ngFor="let logItem of log; let i = index"
+      [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+      [ngClass]="{'bisque-text' : i >= 4}"
       >{{logItem}}</div>
     </div>
   </div>
