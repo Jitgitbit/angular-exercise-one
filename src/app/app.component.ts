@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   username:'';
   showSecretPassword = false;
+  log = []
+
+  onToggleDetails(){
+    this.showSecretPassword = !this.showSecretPassword;
+    this.log.push(this.log.length + 1);
+  }
 }
