@@ -5,13 +5,17 @@
 
 <p>{{serverName}}</p>
 
-<button class="btn btn-primary" [disabled]="!allowNewServers" (click)="onCreateServer()">Add Server</button>
+<button
+class="btn btn-primary" 
+[disabled]="!allowNewServers" 
+(click)="onCreateServer()"
+>Add Server</button>
 
 <!-- <p>{{allowNewServers}}</p> -->
 
 <!-- <p>{{serverCreationStatus}}</p> -->
 <p *ngIf="serverCreated; else noServer">Server was created, server name is {{serverName}}</p>
-<!-- VERY IMPORTANT!! the * indicates that the directive is a structural one, meaning it can change the DOM structure (here by adding a paragraph yes or no) -->
+<!-- VERY IMPORTANT!! the * indicates that the directive is a structural one, meaning it can change the DOM structure (here by adding a paragraph or any other element) -->
 <ng-template #noServer>
   <p>No server was created!</p>
 </ng-template>
