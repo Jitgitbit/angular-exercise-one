@@ -18,7 +18,7 @@
       >Reset User</button>
       <hr>
       <button class="btn btn-primary" (click)="showSecretPassword = !showSecretPassword">Toggle details</button>
-      <button class="btn btn-primary" (click)="onToggleDetails()">Toggle details with logOne</button>
+      <button class="btn btn-primary" (click)="onToggleDetails()">Toggle details with log</button>
       <p *ngIf="showSecretPassword">Secret Password = Tuna</p>
       <div 
       *ngFor="let logOneItem of logOne"
