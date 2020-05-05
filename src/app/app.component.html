@@ -16,6 +16,9 @@
       [disabled]="username === '' " 
       (click)="username = '' "
       >Reset User</button>
+      <hr>
+      <button class="btn btn-primary" (click)="showSecretPassword = !showSecretPassword">Toggle details</button>
+      <p *ngIf="showSecretPassword">Secret Password = Tuna</p>
     </div>
   </div>
 </div>
